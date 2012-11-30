@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Dice";
+  src: url(http://www.ambor.com/hb/dice.ttf) format("truetype");
+}
+
+@beize: darken(green, 10%);
+.background rect {
+	fill: @beize;
+}
+
+@col: beige;
+
+
+.places {
+
+	polyline:nth-child(even) {
+		fill: @beize;
+	}
+	
+	polyline:nth-child(odd) {
+		fill: @col;
+	}
+
+	polyline {
+		stroke: @col;
+		stroke-width: 2px;
+		stroke-style: solid;
+	}
+	
+} 
+
+.bar rect {
+	fill: @beize;
+	stroke: @col;
+	stroke-width: 2px;
+	stroke-style: solid;
+}
+
+.home rect {
+	fill: @beize;
+	stroke: @col;
+	stroke-width: 2px;
+	stroke-style: solid;
+}
+
+#pieces {
+	circle {
+		fill: lighten(black, 45%);
+		stroke: black;
+		stroke-width: 2px;
+		stroke-style: solid;
+		r: 25;
+		transition: cx 1s, cy 1s;
+	}
+	circle.red {
+		fill: lighten(red, 15%);
+	}
+	circle.selected {
+		fill: yellow;
+	}
+	circle:hover {
+		stroke: yellow;
+	}
+}
+
+#dice {
+	font-family: "Dice";
+	font-size: 60px;
+	margin: 10px;
+	
+	a {
+		color: black;
+	}
+	a.red {
+		color: red;
+	}
+	a:hover {
+		color: yellow;
+		cursor: pointer;
+	}
+}

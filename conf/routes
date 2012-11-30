@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# View for the game
+GET		/game/:id					controllers.Application.game(id:String, red:Boolean?=true)
+
+# Websocket for the game
+GET		/gamesocket/:id				controllers.Application.gameSocket(id:String, red:Boolean?=true)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
