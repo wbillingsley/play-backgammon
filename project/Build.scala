@@ -7,7 +7,6 @@ object ApplicationBuild extends Build {
     val appVersion      = "1.0"
       
     val appDependencies = Seq(
-      "com.wbillingsley" %% "handy" % "0.2-SNAPSHOT"
     )
 
     val main = play.Project(appName, appVersion, appDependencies).settings(
